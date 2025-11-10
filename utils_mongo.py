@@ -9,6 +9,6 @@ def conectar_mongo(uri, base, coleccion):
     return col
 
 def obtener_datos(coleccion):
-    """Convierte la colección MongoDB en DataFrame."""
-    data = list(coleccion.find({}, {"_id": 0}))
+    """Convierte la colección MongoDB en un DataFrame."""
+    data = list(coleccion.find({}, {"_id": 0}))  # excluye el ObjectId
     return pd.DataFrame(data)
