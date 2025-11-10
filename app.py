@@ -9,7 +9,7 @@ from lambda_speed import recomendacion_rapida
 st.set_page_config(page_title="🏋️ Sistema Recomendador de Deportes (Lambda + MongoDB)", layout="wide")
 
 # --- Conexión a MongoDB ---
-MONGO_URI = st.secrets["mongo"]["uri"]
+MONGO_URI = "mongodb+srv://freddy_db_user:freddy1991@cluster0.fjs355s.mongodb.net/"
 coleccion = conectar_mongo(MONGO_URI, "deportes_db", "deportes")
 df = obtener_datos(coleccion)
 
